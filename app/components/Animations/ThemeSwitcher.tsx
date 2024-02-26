@@ -13,7 +13,7 @@ export default function ThemeSwitcher() {
 
   return (
     <>
-      <label className="swap swap-rotate sticky left-4 top-12 z-50">
+      <label className="swap swap-rotate sticky left-24 top-[0.80rem] z-50">
         {/* this hidden checkbox controls the state */}
         <input
           type="checkbox"
@@ -25,7 +25,7 @@ export default function ThemeSwitcher() {
         />
         {/* sun icon */}
         <svg
-          className="swap-on fill-current w-7 h-7"
+          className="swap-on fill-current w-6 h-6"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
@@ -33,7 +33,7 @@ export default function ThemeSwitcher() {
         </svg>
         {/* moon icon */}
         <svg
-          className="swap-off fill-current w-7 h-7"
+          className="swap-off fill-current w-6 h-6"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >

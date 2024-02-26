@@ -5,7 +5,7 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import backgroundPattern from "../public/backgroundPattern.png";
-import ThemeSwitcher from "./components/Animations/ThemeSwitcher";
+import Nav from "./components/Nav";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       className="w-full overflow-x-clip bg-opacity-5"
       style={{ backgroundImage: `url(${backgroundPattern.src})` }}
     >
-      <ThemeSwitcher />
+      <Nav />
       <div className="">
         <Header />
         <Skills />
