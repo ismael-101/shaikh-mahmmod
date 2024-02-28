@@ -1,11 +1,13 @@
 import Image from "next/image";
-import Header from "./components/Header";
-import Skills from "./components/Skills";
-import Services from "./components/Services";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Header from "./components/Main/Header";
+import Skills from "./components/Main/Skills";
+import Services from "./components/Main/Services";
+import Contact from "./components/Main/Contact";
+import Footer from "./components/Main/Footer";
 import backgroundPattern from "../public/backgroundPattern.png";
-import Nav from "./components/Nav";
+
+import ThemeSwitcher from "./components/Animations/ThemeSwitcher";
+import Menu from "./components/utils/Menu";
 
 export default function Home() {
   return (
@@ -13,8 +15,12 @@ export default function Home() {
       className="w-full overflow-x-clip bg-opacity-5"
       style={{ backgroundImage: `url(${backgroundPattern.src})` }}
     >
-      <Nav />
-      <div className="">
+      <span className="fixed top-5 left-3 text-xs cursor-pointer">
+        الشيخ محمود
+      </span>
+      <ThemeSwitcher />
+      <Menu />
+      <div>
         <Header />
         <Skills />
         <Services />

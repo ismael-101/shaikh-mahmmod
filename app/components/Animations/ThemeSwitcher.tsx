@@ -13,7 +13,7 @@ export default function ThemeSwitcher() {
 
   return (
     <>
-      <label className="swap swap-rotate sticky left-24 top-[0.80rem] z-50">
+      <label className="swap swap-rotate absolute left-24 top-[0.80rem] z-50">
         {/* this hidden checkbox controls the state */}
         <input
           type="checkbox"
