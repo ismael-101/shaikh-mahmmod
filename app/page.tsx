@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Header from "./components/Main/Header";
-import Skills from "./components/Main/Skills";
+import About from "./components/Main/About";
 import Services from "./components/Main/Services";
 import Contact from "./components/Main/Contact";
 import Footer from "./components/Main/Footer";
@@ -22,7 +22,7 @@ export default function Home() {
       <Menu />
       <div>
         <Header />
-        <Skills />
+        <About />
         <Services />
         <Contact />
         <Footer />

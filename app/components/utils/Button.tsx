@@ -8,7 +8,7 @@ export default function Button({
   toggleMenu: () => void;
 }) {
   return (
-    <div className="absolute top-0 right-0 w-[100px] h-[40px] cursor-pointer rounded-[25px] overflow-hidden ">
+    <div className="absolute top-0 right-0  w-[80px] h-[30px] lg:w-[100px] lg:h-[40px] cursor-pointer rounded-[25px] overflow-hidden ">
       <motion.div
         className="relative w-full h-full bg-primary uppercase "
         animate={{ top: isActive ? "-100%" : "0%" }}
@@ -20,7 +20,7 @@ export default function Button({
             toggleMenu();
           }}
         >
-          <PerspectiveText label="Menu" />
+          <PerspectiveText label="القائمة" />
         </div>
         <div
           className="w-full h-full bg-secondary text-secondary-content "
@@ -28,7 +28,7 @@ export default function Button({
             toggleMenu();
           }}
         >
-          <PerspectiveText label="Close" />
+          <PerspectiveText label="اغلق" />
         </div>
       </motion.div>
     </div>

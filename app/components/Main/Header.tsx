@@ -3,13 +3,20 @@
 import { IoMdHeart } from "react-icons/io";
 import useWindowWidth from "../Hooks/useWindowSize";
 import { Quran } from "@/public/quran";
+import { motion } from "framer-motion";
+import { Paragraph, ScrollParagraphProps } from "../Animations/TextAnimation";
 
 export default function Header() {
   const windowWidth = useWindowWidth();
+  const { scrollYProgress, el } = Paragraph() as ScrollParagraphProps;
 
   return (
     <div className="w-full relative">
-      <div className="flex flex-col items-center justify-center pb-20 h-[100dvh] overflow-hidden w-[90%] m-auto">
+      <motion.div
+        ref={el}
+        style={{ opacity: scrollYProgress }}
+        className="flex flex-col items-center justify-center pb-20 h-[100dvh] overflow-hidden w-[90%] m-auto"
+      >
         <div className=" lg:flex lg:items-end flex-row-reverse mt-10 text-md lg:text-xl ">
           <h1>
             ﴾ ۖ...ثُمَّ أَوْرَثْنَا الْكِتَابَ الَّذِينَ اصْطَفَيْنَا مِنْ
@@ -19,7 +26,7 @@ export default function Header() {
         </div>
         <div className="flex flex-col items-center justify-center my-5  lg:my-0 ">
           {windowWidth > 1024 ? (
-            <div className="absolute top-10 pointer-events-none">
+            <div className="absolute top-48 pointer-events-none">
               <Quran
                 className={"text-primary fill-current opacity-10"}
                 size={700}
@@ -50,7 +57,7 @@ export default function Header() {
             المزيد
           </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
