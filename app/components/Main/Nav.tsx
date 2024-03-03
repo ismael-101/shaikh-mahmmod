@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import { perspective, slideIn } from "../Animations/NavAnimation";
 import Link from "next/link";
+import ThemeSwitcher from "../Animations/ThemeSwitcher";
 
 const links = [
   { title: "البدء", href: "/" },
-  { title: "عني", href: "/about" },
-  { title: "خدماتي", href: "/services" },
-  { title: "تواصل معي", href: "/contact" },
-  { title: "الهامشة", href: "/footer" },
+  { title: "عني", href: "#about" },
+  { title: "خدماتي", href: "#services" },
+  { title: "تواصل معي", href: "#contact" },
+  { title: "الهامشة", href: "#footer" },
 ];
 
 const footerLinks = [
@@ -28,7 +29,13 @@ const footerLinks = [
     href: "/",
   },
 ];
-export function Nav() {
+export function Nav({
+  isActive,
+  setIsActive,
+}: {
+  isActive: boolean;
+  setIsActive: any;
+}) {
   const MotionLink = motion(Link);
   return (
     <div className="h-full pt-[100px] px-[40px] pb-[50px] box-border flex flex-col justify-between ">
@@ -49,7 +56,14 @@ export function Nav() {
                 animate="enter"
                 exit="exit"
               >
-                <Link href={href} className="cursor-pointer">
+                <Link
+                  href={href}
+                  className="cursor-pointer"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsActive(!isActive);
+                  }}
+                >
                   {title}
                 </Link>
               </motion.div>
@@ -75,6 +89,9 @@ export function Nav() {
               </MotionLink>
             );
           })}
+          <div className="absolute bottom-16 -left-12">
+            <ThemeSwitcher />
+          </div>
         </motion.div>
       </div>
     </div>

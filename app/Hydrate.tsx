@@ -1,8 +1,10 @@
 "use client";
 
+import Lenis from "@studio-freight/lenis";
 import { useThemeStore } from "@/store";
 import { ReactNode, useEffect, useState } from "react";
 import { Inter } from "next/font/google";
+import backgroundPattern from "../public/backgroundPattern.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,10 +14,25 @@ export default function Hydrate({ children }: { children: ReactNode }) {
   useEffect(() => {
     setIsHydrated(true);
   }, []);
+
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time: number) {
+      lenis.raf(time);
+
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
     <>
       {isHydrated ? (
-        <body data-theme={themeStore.mode} className={inter.className}>
+        <body
+          data-theme={themeStore.mode}
+          className={inter.className}
+          style={{ backgroundImage: `url(${backgroundPattern.src})` }}
+        >
           {children}
         </body>
       ) : (

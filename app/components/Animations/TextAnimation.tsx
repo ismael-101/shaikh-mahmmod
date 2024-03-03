@@ -2,17 +2,17 @@ import { useScroll, MotionValue } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 export interface ScrollParagraphProps {
-  scrollYProgress: MotionValue<number>;
+  hello: MotionValue<number>;
   el: React.MutableRefObject<HTMLDivElement | null>;
 }
 
 export function Paragraph(): ScrollParagraphProps {
   const el = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({
+  const { scrollYProgress : hello } = useScroll({
     target: el,
     offset: ["1 0.6", "1 end"],
   });
-  return { scrollYProgress, el };
+  return { hello, el };
 }
 {
   // this one is to be add to the components so to use the animation
@@ -29,11 +29,3 @@ export function Paragraph(): ScrollParagraphProps {
   */
 }
 
-export function LineParagraph(): ScrollParagraphProps {
-  const el = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({
-    target: el,
-    offset: ["start end", "end end"],
-  });
-  return { scrollYProgress, el };
-}

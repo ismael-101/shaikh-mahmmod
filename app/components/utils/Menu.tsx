@@ -41,7 +41,7 @@ export default function Menu() {
         animate={isActive ? "open" : "closed"}
         initial="closed"
       >
-        <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
+        <AnimatePresence>{isActive && <Nav isActive={isActive} setIsActive={setIsActive}  />}</AnimatePresence>
       </motion.div>
       <Button
         isActive={isActive}

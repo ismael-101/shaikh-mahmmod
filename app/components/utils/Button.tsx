@@ -29,6 +29,7 @@ export default function Button({
           }}
         >
           <PerspectiveText label="اغلق" />
+          
         </div>
       </motion.div>
     </div>
