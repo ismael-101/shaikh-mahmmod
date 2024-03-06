@@ -2,8 +2,8 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 type ThemeState = {
-  mode: "retro" | "business";
-  toggleMode: (theme: "retro" | "business") => void;
+  mode: "retro" | "forest";
+  toggleMode: (theme: "retro" | "forest") => void;
 };
 
 export const useThemeStore = create<ThemeState>()(

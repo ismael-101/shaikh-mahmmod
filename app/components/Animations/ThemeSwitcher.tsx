@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function ThemeSwitcher() {
-  const themes: ("retro" | "business")[] = ["retro", "business"];
+  const themes: ("retro" | "forest")[] = ["retro", "forest"];
   const { toggleMode } = useThemeStore();
-  const handleToggle = (theme: "retro" | "business") => {
+  const handleToggle = (theme: "retro" | "forest") => {
     toggleMode(theme);
   };
   const { mode } = useThemeStore();
@@ -22,7 +22,7 @@ export default function ThemeSwitcher() {
           className="theme-controller"
           value="synthwave"
           onChange={(e) =>
-            handleToggle(e.target.checked ? "business" : "retro")
+            handleToggle(e.target.checked ? "forest" : "retro")
           }
         />
         {/* sun icon */}

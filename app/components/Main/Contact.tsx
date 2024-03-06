@@ -113,9 +113,9 @@ export default function ContactForm() {
     >
       <form
         onSubmit={formik.handleSubmit}
-        className="bg-white flex lg:flex-row flex-col rounded-lg w-full lg:w-2/3 lg:h-3/4 h-[100%] relative"
+        className="bg-white flex lg:flex-row flex-col rounded-lg w-full lg:w-3/4 lg:h-3/4 h-[100%] relative"
       >
-        <div className="text-gray-700 p-6 lg:p-20  lg:px-10">
+        <div className="text-gray-700 p-6 lg:p-20  lg:px-10 z-10">
           <h1 className="text-3xl pb-2">lets get started</h1>
           <p className="text-lg text-gray-500">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
@@ -266,17 +266,16 @@ export default function ContactForm() {
             </div>
           </div>
         </div>
-     
+
         <div className="flex ">
           <Image
             src="/book.svg"
             alt="contact"
             width={600}
             height={600}
-            className="p-12 max-md:absolute top-1/4 max-md:opacity-5 md:opacity-100 md:static"
+            className="p-12 max-lg:absolute top-1/4 max-lg:opacity-5  static "
           />
         </div>
-    
       </form>
     </div>
   );

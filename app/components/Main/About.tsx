@@ -17,7 +17,7 @@ export default function About() {
   return (
     <motion.div id="about" ref={el} style={{ opacity: hello }}>
       <div ref={container}>
-        <div className="sticky top-12 bg-[#6B705C] p-5 pb-7 my-5 rounded-xl text-end w-[60vw] m-auto text-[#f2f8df]">
+        <div className="sticky top-10 bg-[#6B705C] p-5 lg:pb-7 lg:my-5 lg:rounded-xl text-end lg:w-[60vw] m-auto text-[#f2f8df]">
           <h1 className="lg:text-2xl text-base">
             على مدار السنوات الماضية منذ العام 2002 الى اليوم و بفضل من الله
             حصلت على المؤهلات التالية

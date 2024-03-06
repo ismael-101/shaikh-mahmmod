@@ -23,7 +23,7 @@ export default function Button({
           <PerspectiveText label="القائمة" />
         </div>
         <div
-          className="w-full h-full bg-secondary text-secondary-content "
+          className="w-full h-full bg-secondary text-primary-content "
           onClick={() => {
             toggleMenu();
           }}
@@ -39,10 +39,10 @@ export default function Button({
 function PerspectiveText({ label }: { label: string }) {
   return (
     <div className="h-full w-full flex flex-col items-center justify-center hover:[transform:rotateX(90deg)]  transition-transform duration-300 ease-custom1 [transform-style:preserve-3d] ">
-      <p className=" hover:-translate-y-full pointer-events-none transition-all  duration-300 ease-custom1 hover:text-opacity-0">
+      <p className=" hover:-translate-y-full text-primary-content pointer-events-none transition-all  duration-300 ease-custom1 hover:text-opacity-0">
         {label}
       </p>
-      <p className="absolute top-full [transform:rotateX(-90deg)] translate-y-[9px] duration-300 transition-all  ease-custom1 text-opacity-0 hover:text-opacity-100 [transform-origin:bottom\center]">
+      <p className="absolute top-full [transform:rotateX(-90deg)]  translate-y-[9px] duration-300 transition-all  ease-custom1 text-opacity-0 hover:text-opacity-100 [transform-origin:bottom\center]">
         {label}
       </p>
     </div>

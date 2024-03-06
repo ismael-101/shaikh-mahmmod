@@ -25,11 +25,11 @@ export default function Services() {
       id="services"
       ref={el}
       style={{ opacity: hello }}
-      className="h-screen flex items-center justify-center"
+      className="h-screen flex items-start justify-center"
     >
       {/* gallery div */}
       <div className="w-[70%]">
-        <h1 className="text-right my-10 text-[4.3vw] lg:text-[2.3vw] bg-secondary text-secondary-content p-3 rounded-xl underline underline-offset-4">
+        <h1 className="text-right mb-10 mt-10 lg:text-2xl text-lg bg-secondary text-secondary-content p-3 rounded-xl underline underline-offset-8">
           : خدماتي عبر الاون لاين
         </h1>
         {services.map((service, index) => {
@@ -54,11 +54,11 @@ function Service({ service }: { service: any }) {
         setIsActive(false);
       }}
       className={cn(
-        "rounded-t-sm border-b-[1px] pt-[0.8vw] pb-[0.8vw] cursor-pointer w-full  flex justify-center items-center  text-primary-content h-full",
+        "rounded-t-sm border-b-[1px] pt-[0.8vw] pb-[0.8vw] cursor-pointer w-full  flex justify-center items-center   h-full",
         mode === "retro" && "border-neutral border-b-2"
       )}
     >
-      <h2 className="text-[4vw] lg:text-[2vw] mr-3 text-end">
+      <h2 className="text-lg lg:text-xl mr-3 text-end">
         {service.title}
       </h2>
       <motion.div
@@ -67,7 +67,7 @@ function Service({ service }: { service: any }) {
         animate={isActive ? "open" : "closed"}
       >
         <Image
-          className=" w-[25vw] lg:w-[10vw] "
+          className=" w-32 lg:w-40 "
           width={500}
           height={500}
           alt={service.title}

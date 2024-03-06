@@ -29,12 +29,12 @@ export default function Card({
   return (
     <div
       ref={container}
-      className="h-screen flex items-center justify-center sticky top-6"
+      className="h-screen flex items-center justify-center sticky top-9"
     >
       <motion.div
         className={cn(
-          " w-[1000px] h-[500px] flex flex-col relative rounded-3xl p-12 -top-10 ",
-          theme.mode === "business" && "text-neutral"
+          " w-[1000px] h-[500px]  flex flex-col relative rounded-3xl lg:p-12 -top-10 pt-8 ",
+          theme.mode === "forest" && "text-neutral"
         )}
         key={i}
         style={{
@@ -44,9 +44,9 @@ export default function Card({
           top: `calc(-10% + ${i * 25}px)`,
         }}
       >
-        <h2 className="m-0 lg:text-2xl text-xl text-end pr-12 ">{title}</h2>
-        <div className="flex h-full m-12 gap-12">
-          <div className="w-[40%] relative top-[10%]">
+        <h2 className="m-0 lg:text-2xl text-xl text-end pr-12  ">{title}</h2>
+        <div className="flex h-full lg:m-12 m-6 lg:gap-12 gap-6">
+          <div className="w-[40%] relative lg:top-[10%]">
             <p className="text-base text-end">{description}</p>
           </div>
           <div className="relative w-[60%] h-full rounded-3xl overflow-hidden">
