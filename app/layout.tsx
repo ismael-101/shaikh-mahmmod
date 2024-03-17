@@ -13,11 +13,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
-
-
   return (
-    <html lang="ar" >
+    <html lang="ar">
       <Hydrate>{children}</Hydrate>
     </html>
   );

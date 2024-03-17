@@ -1,11 +1,8 @@
-import footerbg from "../../../public/footerbg.jpg";
-
 export default function Footer() {
   return (
     <div className="h-screen relative">
       <footer
         id="footer"
-        style={{backgroundImage: footerbg}}
         className="footer items-center p-4 bg-neutral text-neutral-content absolute bottom-0"
       >
         <aside className="items-center grid-flow-col">
